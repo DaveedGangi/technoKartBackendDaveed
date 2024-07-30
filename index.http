@@ -1,0 +1,90 @@
+
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "Daveed",
+    "password": "Daveed123",
+    "role":"author"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "Daveed",
+    "password": "Daveed123"
+}
+
+
+###
+
+POST http://localhost:3000/postsAdd/
+Content-Type: application/json
+
+{   
+    "title": "My First Note",
+    "content": "This is my first note",
+    "image":"#ffffff",
+    "author_id":1,
+    "status":"published"
+
+    
+}
+
+###
+
+GET http://localhost:3000/allPosts/
+
+###
+
+PUT http://localhost:3000/postUpdate/1
+Content-Type: application/json
+
+{   
+    "title": "Updated My First Note",
+    "content": "This is my Updated first note",
+    "image":"#000000",
+    "author_id":1,
+    "status":"published"
+
+    
+}
+
+###
+
+DELETE http://localhost:3000/postDelete/1
+
+
+###
+
+POST http://localhost:3000/commentsAdd/
+Content-Type: application/json
+
+{   
+    
+    "post_id":1,
+    "author_id":1,
+    "content": "This is a comment"
+}
+
+###
+
+GET http://localhost:3000/allComments/
+
+###
+
+PUT http://localhost:3000/commentApprove/1
+
+###
+DELETE http://localhost:3000/commentDelete/1
+
+###
+PUT http://localhost:3000/commentUnapprove/1
+
+
+
+
